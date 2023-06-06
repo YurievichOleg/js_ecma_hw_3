@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="employee.js"></script>
+    <script src="manager.js"></script>
+    <script src="product.js"></script>
+    <script src="order.js"></script>
+    <script>
+        const employee = new Employee('Ivan11');
+        console.log(employee.displayInfo());
+        const manager = new Manager('Petr', 'Saler');
+        console.log(manager.displayInfo());
+
+        const product1 = new Product("Phone", 500);
+        const product2 = new Product("Headphones", 100);
+        const order = new Order();
+        order.addProduct(product1);
+        order.addProduct(product2);
+
+        console.log(order.getTotalPrice());
+    </script>
+
+</body>
+
+</html>
